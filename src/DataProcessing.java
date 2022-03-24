@@ -98,7 +98,7 @@ public class DataProcessing{
 
     //Method to get the Statistics from the statistics.txt file
     public String[] loadStatistics(String fileName){
-        String[] items = new String[4];
+        String[] items = new String[3];
 
         try {
             Scanner reader = new Scanner(new File(fileName));
