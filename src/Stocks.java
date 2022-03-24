@@ -24,7 +24,6 @@ public class Stocks {
             int action = sc.nextInt();
     
             int itemNo = 0;
-            String itemStock = "";
 
             boolean isValid = false; //checks if entered input in the Back_to_Menu Menu is valid
             String choice = "";
