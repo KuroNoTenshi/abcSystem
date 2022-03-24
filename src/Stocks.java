@@ -36,8 +36,9 @@ public class Stocks {
                     System.out.print("Enter quantity of stocks to add: ");
                     int addQuantity = sc.nextInt();
 
-                    itemStock = items[itemNo-1][2]; //The item Quantity(Stock) of the Selected Item
-                    itemStock = String.valueOf(Integer.parseInt(itemStock) + addQuantity); //adds the entered quantity to the Item Stock
+                    //Update the item Quantity(Stock) of the Selected Item
+                    items[itemNo-1][2] = String.valueOf(Integer.parseInt(items[itemNo-1][2]) + addQuantity); //adds the entered quantity to the Item Stock
+                    
 
                     data.saveItems(items, "items.txt"); //Saves the items to the items.txt file
     
@@ -68,8 +69,8 @@ public class Stocks {
                     System.out.print("Enter quantity of stocks to remove: ");
                     int removeQuantity = sc.nextInt();
 
-                    itemStock = items[itemNo-1][2]; //The item Quantity(Stock) of the Selected Item
-                    itemStock = String.valueOf(Integer.parseInt(itemStock) - removeQuantity); //subtracts the entered quantity to the Item Stock
+                    //Update the item Quantity(Stock) of the Selected Item
+                    items[itemNo-1][2] = String.valueOf(Integer.parseInt(items[itemNo-1][2]) - removeQuantity); //subtracts the entered quantity to the Item Stock
                     
                     data.saveItems(items, "items.txt"); //Saves the items to the items.txt file
     
