@@ -16,8 +16,9 @@ public class NewTransaction {
         for (String[] item : items) {
             System.out.print("[" + itemNo + "]\t");
             for (int i = 0; i < item.length; i++) {
-                System.out.printf(i == 1? "%-15s\n" : "%-20s\n", item[i]);
+                System.out.printf(i == 1? "%-15s" : "%-20s", item[i]);
             }
+            System.out.println("");
             itemNo++;
         }
 
@@ -63,7 +64,7 @@ public class NewTransaction {
         //check if the cash is more than the total balance;
         boolean isNegative = true;
         while (isNegative) {
-            System.out.println("Total: " + total);
+            System.out.println("\nTotal: " + total);
             System.out.println("Enter cash: ");
             cash = sc.nextDouble();
             if (cash >= total) {
@@ -76,7 +77,7 @@ public class NewTransaction {
         }
         
         //Order Summary
-        System.out.println("Order Summary\n\nName of Customer: " + customerName + "\n\nOrders: \n");
+        System.out.println("\nOrder Summary\n\nName of Customer: " + customerName + "\n\nOrders: \n");
        
         for (int i = 0; i < orderedItems.length; i++) {
             String[] itemData = orderedItems[i].split(","); //each String in the orderedItems array will be splitted to get each ordered item's ID and Quantity
